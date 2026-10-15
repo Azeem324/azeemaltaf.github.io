@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Azeem Altaf – System &amp; Network Support Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+:root{
+  --bg:#E8ECF6; --surface:#F7F8FD; --ink:#101534; --muted:#4A5175; --accent:#2A2CF0; --accent-ink:#fff; --line:#BCC3DE;
+  --display:'Bricolage Grotesque','Helvetica Neue',Arial,sans-serif;
+  --body:'Source Serif 4',Georgia,serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0F1226;--surface:#181C3A;--ink:#EAEDFB;--muted:#A3AAD0;--accent:#8F94FF;--accent-ink:#0F1226;--line:#2D3361;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0F1226;--surface:#181C3A;--ink:#EAEDFB;--muted:#A3AAD0;--accent:#8F94FF;--accent-ink:#0F1226;--line:#2D3361;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.125rem/1.65 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
+header{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;font-family:var(--display);font-weight:700}
+nav{display:flex;gap:1.5rem}
+nav a{text-decoration:none}
+nav a:hover{text-decoration:underline;text-underline-offset:6px}
+.hero{padding:clamp(3rem,10vw,8rem) 0 clamp(3rem,8vw,6rem)}
+h1{font:800 clamp(3.2rem,13vw,10.5rem)/.9 var(--display);letter-spacing:-.04em;margin:0}
+.hero p{max-width:34rem;margin:2rem 0 0;font-size:1.35rem;color:var(--muted)}
+.status{display:inline-flex;align-items:center;gap:.6rem;margin-top:2rem;padding:.5rem 1rem;background:var(--surface);border-radius:99px;font:700 .95rem var(--display)}
+.dot{width:.7rem;height:.7rem;border-radius:50%;background:var(--accent);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){.dot{animation:none}html{scroll-behavior:auto}}
+h2{font:800 1.1rem var(--display);margin:0 0 1.5rem;color:var(--muted)}
+section{padding:3rem 0}
+.work{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.work a{display:grid;grid-template-columns:1fr auto;gap:.25rem 2rem;padding:1.75rem .5rem;border-bottom:1px solid var(--line);text-decoration:none;transition:background .2s,padding .2s}
+.work a:hover,.work a:focus-visible{background:var(--accent);color:var(--accent-ink);padding-left:1.25rem}
+.work b{font:700 clamp(1.8rem,5vw,3.2rem)/1.1 var(--display);letter-spacing:-.02em}
+.work span{align-self:end;font-family:var(--display);font-weight:400;font-size:1rem}
+.work small{grid-column:1;font-size:1.05rem;opacity:.8}
+.about{display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media(min-width:48rem){.about{grid-template-columns:3fr 2fr}}
+.about p{margin:0 0 1.25rem;max-width:36rem}
+.skills{background:var(--surface);padding:1.5rem;border-radius:1rem;font-family:var(--display)}
+.skills h3{margin:0 0 .75rem;font-size:1.1rem}
+.skills ul{margin:0 0 1.5rem;padding-left:1.1rem}
+.skills ul:last-child{margin:0}
+.contact{padding:4rem 0 5rem}
+.contact a.mail{display:inline-block;font:800 clamp(1.6rem,6vw,4rem)/1.1 var(--display);letter-spacing:-.03em;text-decoration-thickness:4px;text-underline-offset:8px;text-decoration-color:var(--accent)}
+.contact a.mail:hover{color:var(--accent)}
+.social{display:flex;gap:1.5rem;margin-top:1.5rem;font-family:var(--display);font-weight:700}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1rem;margin:0;padding:0;list-style:none}
+.facts li{background:var(--surface);border-radius:1rem;padding:1.25rem;font-family:var(--display);line-height:1.3}
+.facts b{display:block;font-size:1.5rem;letter-spacing:-.02em}
+.cols{display:grid;gap:1.5rem}
+@media(min-width:48rem){.cols{grid-template-columns:1fr 1fr}}
+.skills dl{margin:0}.skills dt{font-weight:800;margin-top:1rem}.skills dt:first-child{margin-top:0}.skills dd{margin:.2rem 0 0;color:var(--muted);font-family:var(--body);font-size:1rem}
+.plain{margin:0;padding-left:1.1rem}.plain li{margin-bottom:.6rem}
+footer{padding:1.5rem 0 2rem;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span>Azeem Altaf</span>
+    <nav aria-label="Main"><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+  </header>
+  <main>
+    <div class="hero">
+      <h1>I keep 1,500 people connected.</h1>
+      <p>System &amp; Network Support Engineer with 5+ years in manufacturing and enterprise IT. I run switches, VLANs, cameras and phones, and fix problems fast. CCNA and ITIL 4 certified.</p>
+      <div class="status"><span class="dot" aria-hidden="true"></span>Faisalabad, Punjab, Pakistan</div>
+    </div>
+
+    <section aria-labelledby="impact-h">
+      <h2 id="impact-h">What I look after at Interloop</h2>
+      <ul class="facts">
+        <li><b>1,500+ users</b>Supported across two sites, about two hours to resolve</li>
+        <li><b>99% uptime</b>Across 70+ network devices, monitored in PRTG</li>
+        <li><b>450 IP cameras</b>Installed and maintained</li>
+        <li><b>250 phone extensions</b>Configured on the telephone exchange</li>
+      </ul>
+    </section>
+
+    <section id="experience" aria-labelledby="exp-h">
+      <h2 id="exp-h">Experience</h2>
+      <ul class="work">
+        <li><a href="#contact"><b>Interloop Apparel</b><span>Nov 2021 – Present</span><small>Sr. Supervisor, Information Systems. Network administration, user support and infrastructure for a large manufacturing group. I standardised configurations on 70 switches, designed VLAN segmentation that cut unauthorised internal access, and coordinate with ISPs to keep outages short. I also manage backups, accounts, Microsoft 365, antivirus patching and full documentation of assets, licences and IP addresses.</small></a></li>
+        <li><a href="#contact"><b>Gharo Solar</b><span>Jan 2021 – Oct 2021</span><small>Assistant Network Administrator, Lahore. Ran wireless for 100+ users and a secure wired network of 200+ nodes with firewall filtering and encryption. Managed VLANs, EtherChannel, load balancing and 20+ VMware virtual machines.</small></a></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="proj-h">
+      <h2 id="proj-h">Projects</h2>
+      <ul class="plain">
+        <li>Led the networking, surveillance and IP phone installation for a full Interloop unit.</li>
+        <li>Networked Paillung knitting and embroidery machines so production data flows.</li>
+        <li>Installed and networked CAT software and inspection machines.</li>
+        <li>Installed the surveillance system at the Interloop warehouse.</li>
+        <li>At university, built thumb-scanning attendance software.</li>
+      </ul>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-h">
+      <h2 id="skills-h">Skills</h2>
+      <div class="cols">
+        <div class="skills"><dl>
+          <dt>Networking</dt><dd>Subnetting, VLANs, EtherChannel, DHCP, DNS, VPN, load balancing, port forwarding, VoIP</dd>
+          <dt>Security</dt><dd>Sophos firewall, proxy, traffic filtering, access control, security policies</dd>
+          <dt>Systems</dt><dd>VMware, file servers, directory services, backup and recovery, hardware lifecycle</dd>
+        </dl></div>
+        <div class="skills"><dl>
+          <dt>Support</dt><dd>Hardware diagnostics, OS installs, Microsoft 365, antivirus, patching</dd>
+          <dt>Monitoring and records</dt><dd>PRTG, asset inventory, licence tracking, network diagrams</dd>
+          <dt>Process</dt><dd>ITIL 4, incident and vendor management, team leadership</dd>
+        </dl></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="edu-h">
+      <h2 id="edu-h">Certifications and education</h2>
+      <ul class="plain">
+        <li>Cisco Certified Network Associate (CCNA), Netacad</li>
+        <li>ITIL 4 Foundation</li>
+        <li>BS Computer Science, Government College University Faisalabad, 2013–2017</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Contact</h2>
+      <a class="mail" href="mailto:azeemaltaf1434@gmail.com">azeemaltaf1434@gmail.com</a>
+      <div class="social"><a href="tel:+923034058113">+92 303 4058113</a><a href="https://www.linkedin.com/in/azeemaltaf-it">LinkedIn</a></div>
+    </section>
+  </main>
+  <footer>© 2026 Azeem Altaf</footer>
+</div>
+</body>
+</html>
