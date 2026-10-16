@@ -3,140 +3,386 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Azeem Altaf – System &amp; Network Support Engineer</title>
+<title>Azeem Altaf — System and Network Support Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#E8ECF6; --surface:#F7F8FD; --ink:#101534; --muted:#4A5175; --accent:#2A2CF0; --accent-ink:#fff; --line:#BCC3DE;
-  --display:'Bricolage Grotesque','Helvetica Neue',Arial,sans-serif;
-  --body:'Source Serif 4',Georgia,serif;
+  --cobalt:#2a3bff; --cobalt-ink:#f6f5fa; --signal:#ffd84a;
+  --bg:#f6f5fa; --fg:#101436; --muted:#4b5078; --line:#cfd1e6; --row:#e6e8ff;
+  --sans:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
   box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
 }
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){--bg:#0F1226;--surface:#181C3A;--ink:#EAEDFB;--muted:#A3AAD0;--accent:#8F94FF;--accent-ink:#0F1226;--line:#2D3361;color-scheme:dark}
-}
-:root[data-theme="dark"]{--bg:#0F1226;--surface:#181C3A;--ink:#EAEDFB;--muted:#A3AAD0;--accent:#8F94FF;--accent-ink:#0F1226;--line:#2D3361;color-scheme:dark}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
-*,*::before,*::after{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:1.125rem/1.65 var(--body)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1030;--fg:#eceaf7;--muted:#a6abd6;--line:#2b2f66;--row:#171b4d}}
+:root[data-theme="dark"]{--bg:#0d1030;--fg:#eceaf7;--muted:#a6abd6;--line:#2b2f66;--row:#171b4d}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--serif);font-size:1.2rem;line-height:1.6}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-.wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
-header{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;font-family:var(--display);font-weight:700}
-nav{display:flex;gap:1.5rem}
-nav a{text-decoration:none}
-nav a:hover{text-decoration:underline;text-underline-offset:6px}
-.hero{padding:clamp(3rem,10vw,8rem) 0 clamp(3rem,8vw,6rem)}
-h1{font:800 clamp(3.2rem,13vw,10.5rem)/.9 var(--display);letter-spacing:-.04em;margin:0}
-.hero p{max-width:34rem;margin:2rem 0 0;font-size:1.35rem;color:var(--muted)}
-.status{display:inline-flex;align-items:center;gap:.6rem;margin-top:2rem;padding:.5rem 1rem;background:var(--surface);border-radius:99px;font:700 .95rem var(--display)}
-.dot{width:.7rem;height:.7rem;border-radius:50%;background:var(--accent);animation:pulse 2s ease-in-out infinite}
-@keyframes pulse{50%{opacity:.25}}
-@media (prefers-reduced-motion:reduce){.dot{animation:none}html{scroll-behavior:auto}}
-h2{font:800 1.1rem var(--display);margin:0 0 1.5rem;color:var(--muted)}
-section{padding:3rem 0}
-.work{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
-.work a{display:grid;grid-template-columns:1fr auto;gap:.25rem 2rem;padding:1.75rem .5rem;border-bottom:1px solid var(--line);text-decoration:none;transition:background .2s,padding .2s}
-.work a:hover,.work a:focus-visible{background:var(--accent);color:var(--accent-ink);padding-left:1.25rem}
-.work b{font:700 clamp(1.8rem,5vw,3.2rem)/1.1 var(--display);letter-spacing:-.02em}
-.work span{align-self:end;font-family:var(--display);font-weight:400;font-size:1rem}
-.work small{grid-column:1;font-size:1.05rem;opacity:.8}
-.about{display:grid;grid-template-columns:1fr;gap:2.5rem}
-@media(min-width:48rem){.about{grid-template-columns:3fr 2fr}}
-.about p{margin:0 0 1.25rem;max-width:36rem}
-.skills{background:var(--surface);padding:1.5rem;border-radius:1rem;font-family:var(--display)}
-.skills h3{margin:0 0 .75rem;font-size:1.1rem}
-.skills ul{margin:0 0 1.5rem;padding-left:1.1rem}
-.skills ul:last-child{margin:0}
-.contact{padding:4rem 0 5rem}
-.contact a.mail{display:inline-block;font:800 clamp(1.6rem,6vw,4rem)/1.1 var(--display);letter-spacing:-.03em;text-decoration-thickness:4px;text-underline-offset:8px;text-decoration-color:var(--accent)}
-.contact a.mail:hover{color:var(--accent)}
-.social{display:flex;gap:1.5rem;margin-top:1.5rem;font-family:var(--display);font-weight:700}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1rem;margin:0;padding:0;list-style:none}
-.facts li{background:var(--surface);border-radius:1rem;padding:1.25rem;font-family:var(--display);line-height:1.3}
-.facts b{display:block;font-size:1.5rem;letter-spacing:-.02em}
-.cols{display:grid;gap:1.5rem}
-@media(min-width:48rem){.cols{grid-template-columns:1fr 1fr}}
-.skills dl{margin:0}.skills dt{font-weight:800;margin-top:1rem}.skills dt:first-child{margin-top:0}.skills dd{margin:.2rem 0 0;color:var(--muted);font-family:var(--body);font-size:1rem}
-.plain{margin:0;padding-left:1.1rem}.plain li{margin-bottom:.6rem}
-footer{padding:1.5rem 0 2rem;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line)}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+.bar{position:fixed;top:0;left:0;height:4px;width:100%;background:var(--signal);transform:scaleX(0);transform-origin:0 50%;z-index:20}
+
+.hero{background:var(--cobalt);color:var(--cobalt-ink);min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding:1.25rem clamp(1.25rem,4vw,3rem) clamp(1.5rem,4vw,3rem)}
+.nav{display:flex;justify-content:space-between;gap:1rem;font-family:var(--sans);font-size:1rem;font-weight:500}
+.nav a{text-decoration:none;margin-left:1.5rem}
+.nav a:first-child,.nav div:last-child a:first-child{margin-left:0}
+.nav a:hover,.nav a.on{text-decoration:underline;text-underline-offset:4px}
+h1{margin:0;font-family:var(--sans);font-weight:500;font-size:clamp(3.4rem,17vw,16rem);line-height:.86;letter-spacing:-.045em}
+h1 .row{display:block;white-space:nowrap}
+h1 .ch{display:inline-block;font-variation-settings:"wght" 300,"wdth" 80;transition:font-variation-settings .12s linear}
+.hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-top:2.5rem}
+.hero-foot p{margin:0;max-width:28ch;font-size:clamp(1.35rem,2.4vw,1.9rem);line-height:1.25}
+.status{font-family:var(--sans);font-size:1rem;display:flex;align-items:center;gap:.6rem}
+.dot{width:.7rem;height:.7rem;border-radius:50%;background:var(--signal)}
+.clock{font-variant-numeric:tabular-nums}
+
+.marq{background:var(--signal);color:#101436;overflow:hidden;white-space:nowrap;padding:1.1rem 0;font-family:var(--sans);font-weight:600;font-size:clamp(1.3rem,3vw,2rem);letter-spacing:-.01em}
+.marq .t{display:inline-block;animation:slide 34s linear infinite}
+.marq:hover .t{animation-play-state:paused}
+.marq span{margin:0 1.6rem}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+section{padding:clamp(4rem,10vw,8rem) clamp(1.25rem,4vw,3rem)}
+.wrap{max-width:80rem;margin:0 auto}
+h2{font-family:var(--sans);font-weight:600;font-size:clamp(1.8rem,4vw,3rem);letter-spacing:-.02em;margin:0 0 2.5rem;line-height:1.1}
+.proj{display:grid;grid-template-columns:8rem 1fr;gap:.5rem 1.5rem;padding:2rem 1rem;border-top:1px solid var(--line);transition:background .2s}
+.proj:last-child{border-bottom:1px solid var(--line)}
+.proj:hover{background:var(--row)}
+.proj .yr{font-family:var(--sans);color:var(--muted);font-size:1rem;padding-top:.5rem}
+.proj h3{margin:0;font-family:var(--sans);font-weight:600;font-size:clamp(1.5rem,3.2vw,2.4rem);letter-spacing:-.02em;line-height:1.15}
+.proj .role{font-family:var(--sans);font-size:1rem;color:var(--muted);margin:.3rem 0 .8rem}
+.proj p{margin:0;max-width:60ch}
+.proj h4{font-family:var(--sans);font-size:1rem;font-weight:600;margin:1.2rem 0 .3rem}
+.proj ul{margin:0;padding-left:1.2rem;max-width:64ch}
+.proj li{margin-bottom:.35rem}
+
+.svc{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.svc>div{padding:2rem 1.5rem 2rem 0}
+.svc>div+div{padding-left:1.5rem;border-left:1px solid var(--line)}
+.svc h3{font-family:var(--sans);font-weight:600;font-size:1.5rem;margin:0 0 .6rem;letter-spacing:-.01em}
+.svc p{margin:0;color:var(--muted)}
+.stats{background:var(--row);padding-top:3rem;padding-bottom:3rem}
+.stats .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;font-family:var(--sans)}
+.stats b{display:block;font-weight:600;font-size:clamp(2.6rem,7vw,5.5rem);line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.stats span{color:var(--muted);font-size:1rem}
+.about{display:grid;grid-template-columns:1fr 1.4fr;gap:3rem}
+.about h2{margin:0}
+.about p{margin:0 0 1.2rem;max-width:62ch}
+.facts{list-style:none;margin:2rem 0 0;padding:0;font-family:var(--sans);font-size:1.05rem}
+.facts li{padding:.8rem 0;border-top:1px solid var(--line);display:grid;grid-template-columns:9rem 1fr;gap:1rem}
+.facts li span:first-child{color:var(--muted)}
+
+.quotes{display:grid}
+.q{grid-area:1/1;opacity:0;transition:opacity .6s;pointer-events:none;margin:0}
+.q.on{opacity:1;pointer-events:auto}
+.q blockquote{margin:0;font-size:clamp(1.7rem,3.8vw,2.9rem);line-height:1.2;max-width:26em}
+.q cite{display:block;margin-top:1.2rem;font-family:var(--sans);font-style:normal;font-size:1rem;color:var(--muted)}
+.dots{display:flex;gap:.6rem;margin-top:2rem}
+.dots button{width:2.6rem;height:.5rem;border:0;padding:0;border-radius:3px;background:var(--line);cursor:pointer}
+.dots button.on{background:var(--cobalt)}
+
+.mon{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);font-family:var(--sans)}
+.dev{padding:1.2rem 1.2rem 1.2rem 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:auto 1fr auto;gap:.2rem .8rem;align-items:center}
+.dev+.dev{padding-left:1.2rem}
+.dev:nth-child(3n+1){padding-left:0}
+.dev i{width:.8rem;height:.8rem;border-radius:50%;background:#2fd27a;box-shadow:0 0 0 4px rgba(47,210,122,.2)}
+.dev.down i{background:#ff5a5f;box-shadow:0 0 0 4px rgba(255,90,95,.25)}
+.dev b{font-weight:600;font-size:1.1rem}
+.dev em{font-style:normal;font-variant-numeric:tabular-nums;color:var(--muted)}
+.dev small{grid-column:2/-1;color:var(--muted);font-size:.9rem}
+.log{margin:1.5rem 0 0;padding:0;list-style:none;font-family:var(--sans);font-size:1rem;color:var(--muted);min-height:7.5rem}
+.log li{padding:.25rem 0}
+.log time{color:var(--fg);font-variant-numeric:tabular-nums;margin-right:.8rem}
+.tools{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));display:flex;gap:.6rem;z-index:15;font-family:var(--sans)}
+.tools button{font:inherit;font-size:.95rem;font-weight:600;padding:.6rem 1rem;border:2px solid var(--fg);border-radius:999px;background:var(--bg);color:var(--fg);cursor:pointer}
+.tools #top-btn{opacity:0;pointer-events:none;transition:opacity .2s}
+.tools #top-btn.show{opacity:1;pointer-events:auto}
+#cur{animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.contact{background:var(--cobalt);color:var(--cobalt-ink)}
+.contact p{margin:0 0 1rem;font-size:1.5rem}
+.mail{display:inline-block;font-family:var(--sans);font-weight:600;font-size:clamp(1.4rem,5.4vw,4.6rem);letter-spacing:-.03em;line-height:1.05;text-underline-offset:.12em;word-break:break-word}
+.mail:hover{color:var(--signal)}
+.links{margin-top:2rem;display:flex;gap:1.75rem;flex-wrap:wrap;font-family:var(--sans);font-size:1.05rem}
+.form{margin-top:3rem;display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;max-width:44rem;font-family:var(--sans)}
+.form label{display:grid;gap:.4rem;font-size:1rem}
+.form .full{grid-column:1/-1}
+.form input,.form textarea{font:inherit;font-size:1.1rem;padding:.8rem 1rem;border:2px solid var(--cobalt-ink);border-radius:6px;background:transparent;color:inherit}
+.form textarea{min-height:8rem;resize:vertical}
+.form button{justify-self:start;font:inherit;font-weight:600;font-size:1.1rem;padding:.9rem 1.6rem;border:0;border-radius:6px;background:var(--signal);color:#101436;cursor:pointer}
+.msg{grid-column:1/-1;min-height:1.5rem;margin:0}
+footer{padding:1.5rem clamp(1.25rem,4vw,3rem);font-family:var(--sans);font-size:.9rem;color:var(--muted);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+
+@media (max-width:780px){
+  .mon{grid-template-columns:1fr}
+  .dev,.dev+.dev{padding-left:0}
+  .about,.form{grid-template-columns:1fr;gap:1.5rem}
+  .proj{grid-template-columns:1fr}
+  .svc{grid-template-columns:1fr}
+  .svc>div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+  .stats .wrap{grid-template-columns:1fr 1fr 1fr;gap:.8rem}
+  .facts li{grid-template-columns:1fr;gap:0}
+  .nav div:last-child{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}h1 .ch{transition:none}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <span>Azeem Altaf</span>
-    <nav aria-label="Main"><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
-  </header>
-  <main>
-    <div class="hero">
-      <h1>I keep 1,500 people connected.</h1>
-      <p>System &amp; Network Support Engineer with 5+ years in manufacturing and enterprise IT. I run switches, VLANs, cameras and phones, and fix problems fast. CCNA and ITIL 4 certified.</p>
-      <div class="status"><span class="dot" aria-hidden="true"></span>Faisalabad, Punjab, Pakistan</div>
+<div class="bar" id="bar" aria-hidden="true"></div>
+<header class="hero" id="top">
+  <nav class="nav" aria-label="Primary">
+    <div><a href="#top">Azeem Altaf</a></div>
+    <div><a href="#projects">Projects</a><a href="#services">Services</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+  </nav>
+  <div>
+    <h1 aria-label="Azeem Altaf" id="name"><span class="row">Azeem</span><span class="row">Altaf</span></h1>
+    <div class="hero-foot">
+      <p>System and network support engineer.<br>I <span id="typed">keep factory networks running.</span><span id="cur" aria-hidden="true">|</span></p>
+      <div class="status"><span class="dot" aria-hidden="true"></span>Faisalabad <span class="clock" id="clock"></span> <span aria-hidden="true">&middot;</span> <span id="avail">Online</span> <span aria-hidden="true">&middot;</span> CCNA and ITIL 4 certified</div>
     </div>
+  </div>
+</header>
 
-    <section aria-labelledby="impact-h">
-      <h2 id="impact-h">What I look after at Interloop</h2>
+<div class="marq" aria-label="Skills: Cisco switching, VLANs, PRTG, Sophos firewall, VMware, Microsoft 365, IP telephony, IP cameras, ITIL 4"><div class="t" aria-hidden="true" id="marq"><span>Cisco switching</span><span>VLAN segmentation</span><span>PRTG monitoring</span><span>Sophos firewall</span><span>VMware</span><span>Microsoft 365</span><span>IP telephony</span><span>IP cameras</span><span>ITIL 4</span></div></div>
+
+<main>
+<section id="projects" aria-labelledby="pr-h">
+  <div class="wrap">
+    <h2 id="pr-h">Selected projects</h2>
+    <article class="proj"><div class="yr">Interloop</div><div>
+      <h3>Full unit network, cameras and phones</h3>
+      <div class="role">Led installation and supervision</div>
+      <p>Led the installation of networking devices, surveillance cameras and IP phones for a complete Interloop unit, working hands-on alongside the team.</p>
+    </div></article>
+    <article class="proj"><div class="yr">Interloop</div><div>
+      <h3>Production machine networking</h3>
+      <div class="role">Network engineer</div>
+      <p>Connected Paillung knitting machines, embroidery machines, CAT software and inspection machines to the network so production data and controls stay online.</p>
+    </div></article>
+    <article class="proj"><div class="yr">Interloop</div><div>
+      <h3>Warehouse surveillance system</h3>
+      <div class="role">Installer and maintainer</div>
+      <p>Installed the IP camera system at the Interloop warehouse and manage faulty-unit replacement and vendor repairs on schedule.</p>
+    </div></article>
+    <article class="proj"><div class="yr">Interloop</div><div>
+      <h3>VLAN segmentation and proactive monitoring</h3>
+      <div class="role">Designer and administrator</div>
+      <p>Designed VLAN segmentation and security policies that reduced unauthorized internal access, and set up PRTG monitoring that cut network downtime.</p>
+    </div></article>
+    <article class="proj"><div class="yr">Gharo Solar</div><div>
+      <h3>Secure wired and wireless network</h3>
+      <div class="role">Assistant network administrator</div>
+      <p>Ran enterprise Wi-Fi across several locations and a firewall-protected wired network with VLANs, EtherChannel, load balancing and port forwarding.</p>
+    </div></article>
+    <article class="proj"><div class="yr">University</div><div>
+      <h3>Thumb-scanning attendance software</h3>
+      <div class="role">Developer, BSCS project</div>
+      <p>Built attendance software that identified students by thumb scan.</p>
+    </div></article>
+  </div>
+</section>
+
+<section id="services" aria-labelledby="svc-h" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <h2 id="svc-h">What I do</h2>
+    <div class="svc">
+      <div><h3>Network administration</h3><p>Cisco switching, VLANs, EtherChannel, DHCP, DNS, VPN and ISP coordination, monitored around the clock in PRTG.</p></div>
+      <div><h3>Systems and infrastructure</h3><p>Servers, VMware, file and directory services, Microsoft 365, user access, backup and recovery before every change.</p></div>
+      <div><h3>Surveillance and telephony</h3><p>IP camera installation and upkeep, IP phone setup and telephone exchange users for every extension.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="stats" aria-label="Numbers"><div class="wrap">
+  <div><b id="yrs" data-to="5" data-s="+">5+</b><span>years in IT support and networking</span></div>
+  <div><b data-to="2">2</b><span>certifications: CCNA and ITIL 4</span></div>
+  <div><b data-to="2">2</b><span>employers across manufacturing and solar</span></div>
+</div></section>
+
+<section id="monitor" aria-labelledby="mon-h" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <h2 id="mon-h" style="margin-bottom:.8rem">Live network view</h2>
+    <p style="margin:0 0 2rem;color:var(--muted);max-width:56ch">A simulated demo of the kind of PRTG dashboard I watch every day. It updates on its own, and the ISP link drops now and then so you can see how outages show up.</p>
+    <div class="mon" id="mon" aria-hidden="true"></div>
+    <ul class="log" id="log" aria-hidden="true"></ul>
+  </div>
+</section>
+
+<section id="about" aria-labelledby="about-h">
+  <div class="wrap about">
+    <h2 id="about-h">About</h2>
+    <div>
+      <p>I'm a system and network support engineer with experience across manufacturing and enterprise environments. I work with Cisco switches, IP phones, cameras and servers, and I'm known for fast troubleshooting, clear documentation and reliable user support.</p>
+      <p>I also coordinate with ISPs and vendors, lead small teams and keep every device, licence, IP address and network diagram recorded so the next fix is quicker than the last.</p>
       <ul class="facts">
-        <li><b>1,500+ users</b>Supported across two sites, about two hours to resolve</li>
-        <li><b>99% uptime</b>Across 70+ network devices, monitored in PRTG</li>
-        <li><b>450 IP cameras</b>Installed and maintained</li>
-        <li><b>250 phone extensions</b>Configured on the telephone exchange</li>
+        <li><span>Based in</span><span>Faisalabad, Punjab, Pakistan</span></li>
+        <li><span>Role now</span><span>Sr. Supervisor, Information Systems, Interloop Apparel</span></li>
+        <li><span>Education</span><span>BSCS, Government College University Faisalabad, 2013 to 2017</span></li>
+        <li><span>Certifications</span><span>CCNA (Netacad), ITIL 4 Foundation</span></li>
       </ul>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section id="experience" aria-labelledby="exp-h">
-      <h2 id="exp-h">Experience</h2>
-      <ul class="work">
-        <li><a href="#contact"><b>Interloop Apparel</b><span>Nov 2021 – Present</span><small>Sr. Supervisor, Information Systems. Network administration, user support and infrastructure for a large manufacturing group. I standardised configurations on 70 switches, designed VLAN segmentation that cut unauthorised internal access, and coordinate with ISPs to keep outages short. I also manage backups, accounts, Microsoft 365, antivirus patching and full documentation of assets, licences and IP addresses.</small></a></li>
-        <li><a href="#contact"><b>Gharo Solar</b><span>Jan 2021 – Oct 2021</span><small>Assistant Network Administrator, Lahore. Ran wireless for 100+ users and a secure wired network of 200+ nodes with firewall filtering and encryption. Managed VLANs, EtherChannel, load balancing and 20+ VMware virtual machines.</small></a></li>
+<section id="experience" aria-labelledby="ex-h" style="background:var(--row)">
+  <div class="wrap">
+    <h2 id="ex-h">Experience</h2>
+    <article class="proj" style="background:none"><div class="yr">Nov 2021 to now</div><div>
+      <h3>Sr. Supervisor, Information Systems</h3>
+      <div class="role">Interloop Apparel, Faisalabad</div>
+      <h4>Support and networks</h4>
+      <ul>
+        <li>Fix hardware, software and connectivity faults for users across multiple sites.</li>
+        <li>Monitor devices in PRTG to cut downtime, and work with ISPs to resolve outages fast.</li>
+        <li>Configure switches to corporate standards and run VLAN segmentation with security policies.</li>
       </ul>
-    </section>
-
-    <section aria-labelledby="proj-h">
-      <h2 id="proj-h">Projects</h2>
-      <ul class="plain">
-        <li>Led the networking, surveillance and IP phone installation for a full Interloop unit.</li>
-        <li>Networked Paillung knitting and embroidery machines so production data flows.</li>
-        <li>Installed and networked CAT software and inspection machines.</li>
-        <li>Installed the surveillance system at the Interloop warehouse.</li>
-        <li>At university, built thumb-scanning attendance software.</li>
+      <h4>Systems and security</h4>
+      <ul>
+        <li>Monitor servers, storage and DHCP, manage accounts and permissions, and back up files and databases before every change.</li>
+        <li>Install and update operating systems, Microsoft 365 and antivirus, and push security fixes promptly.</li>
+        <li>Track hardware lifecycles and keep full records of licences, IP addresses, topologies and permissions.</li>
       </ul>
-    </section>
-
-    <section id="skills" aria-labelledby="skills-h">
-      <h2 id="skills-h">Skills</h2>
-      <div class="cols">
-        <div class="skills"><dl>
-          <dt>Networking</dt><dd>Subnetting, VLANs, EtherChannel, DHCP, DNS, VPN, load balancing, port forwarding, VoIP</dd>
-          <dt>Security</dt><dd>Sophos firewall, proxy, traffic filtering, access control, security policies</dd>
-          <dt>Systems</dt><dd>VMware, file servers, directory services, backup and recovery, hardware lifecycle</dd>
-        </dl></div>
-        <div class="skills"><dl>
-          <dt>Support</dt><dd>Hardware diagnostics, OS installs, Microsoft 365, antivirus, patching</dd>
-          <dt>Monitoring and records</dt><dd>PRTG, asset inventory, licence tracking, network diagrams</dd>
-          <dt>Process</dt><dd>ITIL 4, incident and vendor management, team leadership</dd>
-        </dl></div>
-      </div>
-    </section>
-
-    <section aria-labelledby="edu-h">
-      <h2 id="edu-h">Certifications and education</h2>
-      <ul class="plain">
-        <li>Cisco Certified Network Associate (CCNA), Netacad</li>
-        <li>ITIL 4 Foundation</li>
-        <li>BS Computer Science, Government College University Faisalabad, 2013–2017</li>
+      <h4>Cameras and phones</h4>
+      <ul><li>Install and maintain the IP camera system, and configure IP phones and exchange users for all extensions.</li></ul>
+    </div></article>
+    <article class="proj" style="background:none"><div class="yr">Jan to Oct 2021</div><div>
+      <h3>Assistant Network Administrator</h3>
+      <div class="role">Gharo Solar Pvt. Ltd., Lahore</div>
+      <ul>
+        <li>Supported users on operating systems, office apps and connectivity across locations.</li>
+        <li>Managed enterprise wireless, a secure wired network, switches with VLANs and EtherChannel, load balancing and port forwarding.</li>
+        <li>Protected the network with firewall and proxy solutions, and ran VMware virtual machines on enterprise rack servers.</li>
+        <li>Maintained user management, directory services and file servers.</li>
       </ul>
-    </section>
+    </div></article>
+  </div>
+</section>
 
-    <section id="contact" class="contact" aria-labelledby="contact-h">
-      <h2 id="contact-h">Contact</h2>
-      <a class="mail" href="mailto:azeemaltaf1434@gmail.com">azeemaltaf1434@gmail.com</a>
-      <div class="social"><a href="tel:+923034058113">+92 303 4058113</a><a href="https://www.linkedin.com/in/azeemaltaf-it">LinkedIn</a></div>
-    </section>
-  </main>
-  <footer>© 2026 Azeem Altaf</footer>
-</div>
+<section id="skills" aria-labelledby="sk-h">
+  <div class="wrap">
+    <h2 id="sk-h">Skills</h2>
+    <ul class="facts" style="margin:0">
+      <li><span>Networking</span><span>Subnetting, VLANs, EtherChannel, switching, DHCP, DNS, VPN, load balancing, port forwarding, VoIP, topology design</span></li>
+      <li><span>Network security</span><span>Sophos firewall, proxy solutions, VLAN segmentation, traffic filtering, encryption, access control</span></li>
+      <li><span>Systems</span><span>Server monitoring, VMware, file servers, directory services, backup and recovery, hardware lifecycle</span></li>
+      <li><span>User support</span><span>Hardware diagnostics, OS installs, Microsoft 365, antivirus, security patching, incident resolution</span></li>
+      <li><span>Monitoring and records</span><span>PRTG, asset inventory, licence tracking, IP records, network diagrams</span></li>
+      <li><span>Process and leadership</span><span>ITIL 4, incident management, vendor management, team leadership</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="how" aria-labelledby="how-h" style="background:var(--row)">
+  <div class="wrap">
+    <h2 id="how-h">How I work</h2>
+    <div class="quotes" id="quotes">
+      <figure class="q on"><blockquote>Fix it fast, then write down what changed.</blockquote><cite>Troubleshooting and documentation</cite></figure>
+      <figure class="q"><blockquote>Back up everything before touching anything.</blockquote><cite>Backup and recovery</cite></figure>
+      <figure class="q"><blockquote>Watch the network so users never have to report the outage.</blockquote><cite>Proactive monitoring</cite></figure>
+      <figure class="q"><blockquote>Split the network so one problem stays one problem.</blockquote><cite>VLAN segmentation</cite></figure>
+    </div>
+    <div class="dots" id="dots" role="group" aria-label="Choose a statement"></div>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <h2 id="contact-h" style="color:inherit">Get in touch</h2>
+    <p>Tell me what needs to stay online.</p>
+    <a class="mail" href="mailto:azeemaltaf1434@gmail.com">azeemaltaf1434@gmail.com</a>
+    <div class="links">
+      <a href="tel:+923034058113">+92 303 4058113</a>
+      <a href="https://linkedin.com/in/azeemaltaf-it" rel="noopener">LinkedIn</a>
+      <a href="https://azeem324.github.io/azeemaltaf.github.io" rel="noopener">Website</a>
+    </div>
+    <form class="form" id="form" novalidate>
+      <label>Your name<input name="n" autocomplete="name" required></label>
+      <label>Your email<input name="e" type="email" autocomplete="email" required></label>
+      <label class="full">How can I help?<textarea name="m" required></textarea></label>
+      <button type="submit">Send message</button>
+      <p class="msg" id="msg" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer><span>&copy; 2026 Azeem Altaf</span><span>Faisalabad, Punjab, Pakistan</span></footer>
+<div class="tools"><button type="button" id="theme-btn" aria-label="Switch between light and dark mode">Dark mode</button><button type="button" id="top-btn" aria-label="Back to top">Top</button></div>
+
+<script>
+(function(){
+  var $=function(s){return document.querySelector(s)},all=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+  var still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Name: one load sweep, then pointer-driven weight
+  var h=$('#name'),chars=[];
+  all('#name .row').forEach(function(r){var t=r.textContent;r.textContent='';r.setAttribute('aria-hidden','true');t.split('').forEach(function(c){var s=document.createElement('span');s.className='ch';s.textContent=c;r.appendChild(s);chars.push(s)})});
+  function set(el,w){el.style.fontVariationSettings='"wght" '+Math.round(w)+',"wdth" 80'}
+  if(still){chars.forEach(function(c){set(c,500)})}
+  else{
+    chars.forEach(function(c,i){set(c,300);setTimeout(function(){set(c,800);setTimeout(function(){set(c,500)},260)},250+i*70)});
+    var raf=0,px=0,py=0;
+    addEventListener('pointermove',function(e){px=e.clientX;py=e.clientY;if(!raf)raf=requestAnimationFrame(function(){raf=0;chars.forEach(function(c){var b=c.getBoundingClientRect(),dx=px-(b.left+b.width/2),dy=py-(b.top+b.height/2),d=Math.sqrt(dx*dx+dy*dy);set(c,Math.max(300,800-Math.min(d,420)/420*500))})})});
+  }
+  // Marquee loop and live clock
+  var mq=$('#marq');mq.innerHTML+=mq.innerHTML;if(still)mq.style.animation='none';
+  function tick(){try{$('#clock').textContent=new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Asia/Karachi'})}catch(e){}}
+  tick();setInterval(tick,15000);
+  // Progress bar and active nav link
+  var bar=$('#bar'),links=all('.nav a[href^="#"]'),secs=links.map(function(a){return $(a.getAttribute('href'))});
+  function onScroll(){var d=document.documentElement,m=d.scrollHeight-innerHeight;bar.style.transform='scaleX('+(m>0?scrollY/m:0)+')';var cur=-1;secs.forEach(function(s,i){if(s&&s.getBoundingClientRect().top<innerHeight*.4)cur=i});links.forEach(function(a,i){a.classList.toggle('on',i===cur)})}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  // Count-up numbers
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);var el=e.target,to=+el.dataset.to,s=el.dataset.s||'';if(still){el.textContent=to+s;return}var t0=performance.now();(function f(t){var p=Math.min((t-t0)/1400,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)))+(p<1?'':s);if(p<1)requestAnimationFrame(f)})(t0)})},{threshold:.6});
+  // Years of experience calculated from my start date (Jan 2021), so it updates itself
+  var yrs=Math.floor((Date.now()-new Date(2021,0,1))/31557600000);$('#yrs').dataset.to=yrs;
+  all('[data-to]').forEach(function(b){io.observe(b)});
+  // Rotating statements, paused on hover or focus
+  var qs=all('.q'),dots=$('#dots'),i=0,paused=false;
+  qs.forEach(function(_,k){var b=document.createElement('button');b.setAttribute('aria-label','Show statement '+(k+1));b.onclick=function(){show(k)};dots.appendChild(b)});
+  function show(k){i=k;qs.forEach(function(q,j){q.classList.toggle('on',j===k)});all('#dots button').forEach(function(b,j){b.classList.toggle('on',j===k)})}
+  show(0);
+  var box=$('#how');['mouseenter','focusin'].forEach(function(v){box.addEventListener(v,function(){paused=true})});['mouseleave','focusout'].forEach(function(v){box.addEventListener(v,function(){paused=false})});
+  if(!still)setInterval(function(){if(!paused)show((i+1)%qs.length)},5000);
+  // Typing role line
+  var ph=['keep factory networks running.','monitor every switch in PRTG.','set up IP phones and cameras.','back up before every change.','segment networks with VLANs.'],tp=$('#typed'),pi=0,ci=0,del=false;
+  if(still){$('#cur').style.display='none'}else{(function type(){var s=ph[pi];ci+=del?-1:1;tp.textContent=s.slice(0,ci);var w=del?35:70;if(!del&&ci===s.length){del=true;w=1800}else if(del&&ci===0){del=false;pi=(pi+1)%ph.length;w=350}setTimeout(type,w)})()}
+  // Availability from Faisalabad time, Monday to Friday 9:00 to 18:00
+  function avail(){try{var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Karachi',weekday:'short',hour:'numeric',hour12:false}).formatToParts(new Date()),wd=p.filter(function(x){return x.type==='weekday'})[0].value,hr=+p.filter(function(x){return x.type==='hour'})[0].value%24,on=!/Sat|Sun/.test(wd)&&hr>=9&&hr<18;$('#avail').textContent=on?'Online now':'Offline, back at 9:00'}catch(e){}}
+  avail();setInterval(avail,60000);
+  // Live network monitor (simulated)
+  var devs=[['Core switch',1,'Cisco, VLAN trunks'],['Sophos firewall',3,'Traffic filtering'],['ISP link',18,'Internet uplink'],['IP camera NVR',6,'Surveillance'],['IP phone exchange',4,'Extensions'],['File server',2,'Backups and shares']],mon=$('#mon'),lg=$('#log'),els=[],down=-1,seen=false;
+  devs.forEach(function(d){var e=document.createElement('div');e.className='dev';e.innerHTML='<i></i><b>'+d[0]+'</b><em>--</em><small>'+d[2]+'</small>';mon.appendChild(e);els.push(e)});
+  function logit(t){var li=document.createElement('li');li.innerHTML='<time>'+new Date().toLocaleTimeString('en-GB',{timeZone:'Asia/Karachi'})+'</time>'+t;lg.insertBefore(li,lg.firstChild);while(lg.children.length>5)lg.removeChild(lg.lastChild)}
+  logit('Monitoring started, all 6 devices up');
+  var mt=0;
+  function mtick(){
+    if(document.hidden||!seen)return;mt++;
+    if(down<0&&!still&&mt%14===0){down=2;els[2].classList.add('down');logit('ISP link timeout, contacting ISP')}
+    els.forEach(function(e,k){var em=e.querySelector('em');if(k===2&&down>=0){em.textContent='Timeout'}else{var b=devs[k][1];em.textContent=(b+Math.random()*b*.6).toFixed(1)+' ms'}});
+    if(down>0)down--;else if(down===0){down=-1;els[2].classList.remove('down');logit('ISP link restored, downtime logged')}
+  }
+  new IntersectionObserver(function(es){seen=es[0].isIntersecting;if(seen)mtick()}).observe($('#monitor'));
+  setInterval(mtick,1500);
+  // Theme toggle (remembers choice) and back-to-top button
+  var root=document.documentElement,tb=$('#theme-btn'),mqd=matchMedia('(prefers-color-scheme: dark)');
+  function isDark(){return root.dataset.theme?root.dataset.theme==='dark':mqd.matches}
+  function lab(){tb.textContent=isDark()?'Light mode':'Dark mode'}
+  try{var st=localStorage.getItem('az-theme');if(st)root.dataset.theme=st}catch(e){}
+  lab();tb.onclick=function(){var n=isDark()?'light':'dark';root.dataset.theme=n;try{localStorage.setItem('az-theme',n)}catch(e){}lab()};
+  var tt=$('#top-btn');tt.onclick=function(){scrollTo({top:0,behavior:still?'auto':'smooth'})};
+  addEventListener('scroll',function(){tt.classList.toggle('show',scrollY>900)},{passive:true});
+  // Contact form: keeps the draft, checks fields, opens an email ready to send
+  var f=$('#form'),msg=$('#msg'),KEY='az-draft';
+  try{var d=JSON.parse(localStorage.getItem(KEY)||'null');if(d)['n','e','m'].forEach(function(k){if(d[k])f.elements[k].value=d[k]})}catch(e){}
+  f.addEventListener('input',function(){try{localStorage.setItem(KEY,JSON.stringify({n:f.n.value,e:f.e.value,m:f.m.value}))}catch(e){}});
+  f.addEventListener('submit',function(ev){ev.preventDefault();
+    if(!f.n.value.trim()||!/^\S+@\S+\.\S+$/.test(f.e.value)||!f.m.value.trim()){msg.textContent='Please add your name, a valid email and a short message.';return}
+    location.href='mailto:azeemaltaf1434@gmail.com?subject='+encodeURIComponent('Message from '+f.n.value)+'&body='+encodeURIComponent(f.m.value+'\n\nFrom: '+f.n.value+' ('+f.e.value+')');
+    msg.textContent='Your email app is opening with the message filled in. Press send there to finish.';
+    try{localStorage.removeItem(KEY)}catch(e){}
+  });
+})();
+</script>
 </body>
 </html>
